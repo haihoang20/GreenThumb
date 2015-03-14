@@ -1,12 +1,272 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="beangames.greenthumb.AllPlants">
+    tools:context="beangames.greenthumb.AllPlants"
+    android:nestedScrollingEnabled="false">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/beans"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Beans"
+            android:textSize="35dp"
+            android:clickable="true"
+            android:linksClickable="false"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/beets"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Beets"
+            android:textSize="35dp"
+            android:layout_below="@id/beans"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/broccoli"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Broccoli"
+            android:textSize="35dp"
+            android:layout_below="@id/beets"
+            android:nestedScrollingEnabled="true"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/brussels_sprout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Brussels Sprout"
+            android:textSize="35dp"
+            android:layout_below="@id/broccoli"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/cabbage"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Cabbage"
+            android:textSize="35dp"
+            android:layout_below="@id/brussels_sprout"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/carrot"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Carrot"
+            android:textSize="35dp"
+            android:layout_below="@id/cabbage"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/cauliflower"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Cauliflower"
+            android:textSize="35dp"
+            android:layout_below="@id/carrot"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/celery"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Celery"
+            android:textSize="35dp"
+            android:layout_below="@id/cauliflower"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/corn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Corn"
+            android:textSize="35dp"
+            android:layout_below="@id/celery"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/cucumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Cucumber"
+            android:textSize="35dp"
+            android:layout_below="@id/corn"
+            android:onClick="plantNextPage"
+            android:nestedScrollingEnabled="false" />
+        <TextView
+            android:id="@+id/eggplant"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Eggplant"
+            android:textSize="35dp"
+            android:layout_below="@id/cucumber"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/kale"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Kale"
+            android:textSize="35dp"
+            android:layout_below="@id/eggplant"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/leek"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Leek"
+            android:textSize="35dp"
+            android:layout_below="@id/kale"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/lettuce"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Lettuce"
+            android:textSize="35dp"
+            android:layout_below="@id/leek"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/melon"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Melon"
+            android:textSize="35dp"
+            android:layout_below="@id/lettuce"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/okra"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Okra"
+            android:textSize="35dp"
+            android:layout_below="@id/melon"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/onion"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Onion"
+            android:textSize="35dp"
+            android:layout_below="@id/okra"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/parsnip"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Parsnip"
+            android:textSize="35dp"
+            android:layout_below="@id/onion"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/peas"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Peas"
+            android:textSize="35dp"
+            android:onClick="plantNextPage"
+            android:layout_below="@+id/parsnip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/pepper"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Pepper"
+            android:textSize="35dp"
+            android:layout_below="@id/peas"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/potato"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Potato"
+            android:textSize="35dp"
+            android:layout_below="@id/pepper"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/pumpkin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Pumpkin"
+            android:textSize="35dp"
+            android:layout_below="@id/potato"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/radish"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Radish"
+            android:textSize="35dp"
+            android:layout_below="@id/pumpkin"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/spinach"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Spinach"
+            android:textSize="35dp"
+            android:layout_below="@id/radish"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/squash"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Squash"
+            android:textSize="35dp"
+            android:layout_below="@id/spinach"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/sweet_potato"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Sweet Potato"
+            android:textSize="35dp"
+            android:layout_below="@id/squash"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/swiss_chard"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Swiss Chard"
+            android:textSize="35dp"
+            android:layout_below="@id/sweet_potato"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/tomato"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Tomato"
+            android:textSize="35dp"
+            android:layout_below="@id/swiss_chard"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/turnip"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Turnip"
+            android:textSize="35dp"
+            android:layout_below="@id/tomato"
+            android:onClick="plantNextPage" />
+        <TextView
+            android:id="@+id/watermelon"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Watermelon"
+            android:textSize="35dp"
+            android:layout_below="@id/turnip"
+            android:onClick="plantNextPage" />
+
+
+    </RelativeLayout>
+</ScrollView>
+
+
+
+

@@ -1,12 +1,18 @@
 package beangames.greenthumb;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 public class AllPlants extends ActionBarActivity {
+    private String current;
+    private TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,5 +41,18 @@ public class AllPlants extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public String getText(View v){
+        int i =  v.getId();
+        return current.toString();
+    }
+
+    public void plantNextPage(View v){
+        tv = (TextView) v;
+        current = tv.getText().toString();
+        Intent intent = new Intent(getApplicationContext(),Plant.class);
+        intent.putExtra("name",current);
+        startActivity(intent);
+
     }
 }
