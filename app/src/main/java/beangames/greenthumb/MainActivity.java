@@ -1,25 +1,36 @@
 package beangames.greenthumb;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
     private Button myGardenButton;
     private Button allPlantsButton;
     private Button infoButton;
     private TextView mainMenuText;
+    private TextView topBarText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
+        setFont();
+        myGardenButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent goToMyGarden = new Intent(getBaseContext(), MyGarden.class);
+                startActivity(goToMyGarden);
+            }
+        });
     }
 
 
@@ -28,7 +39,6 @@ public class MainActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        setFont();
         return true;
     }
 
@@ -49,17 +59,23 @@ public class MainActivity extends ActionBarActivity {
 
     public void setFont(){
         String fontPath = "fonts/OlivesFont.ttf";
+        String fontTitle = "fonts/Chocolate.ttf";
         Typeface tf =Typeface.createFromAsset(getAssets(),fontPath);
+        Typeface tfmenu = Typeface.createFromAsset(getAssets(),fontTitle);
         myGardenButton = (Button)findViewById(R.id.my_garden);
         allPlantsButton = (Button)findViewById(R.id.all_plants);
         infoButton = (Button)findViewById(R.id.info);
         mainMenuText=(TextView)findViewById(R.id.main_menu);
+        topBarText = (TextView)findViewById(R.id.top_bar);
         myGardenButton.setTypeface(tf);
         allPlantsButton.setTypeface(tf);
         infoButton.setTypeface(tf);
-        mainMenuText.setTypeface(tf);
+        mainMenuText.setTypeface(tfmenu);
+        topBarText.setTypeface(tfmenu);
 
     }
+
+
 
 
 

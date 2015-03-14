@@ -3,60 +3,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ecf0f1"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:nestedScrollingEnabled="true">
+
 
     <TextView
+        android:textStyle="bold"
         android:id="@+id/top_bar"
         android:background="#16a085"
+        android:text="GreenThumb"
+        android:textColor="#12806A"
+        android:textSize="65dp"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         />
 
     <TextView
         android:id="@+id/main_menu"
-        android:textStyle="bold"
         android:background="#5E4731"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="Main Menu"
-        android:textSize="25dp"
+        android:textSize="35dp"
         android:textColor="#ecf0f1"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:textStyle="bold" />
 
     <Button
-        android:textStyle="italic"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="75dp"
         android:id="@+id/my_garden"
         android:layout_width="250dp"
         android:layout_height="75dp"
         android:layout_below="@id/top_bar"
         android:text="My Garden"
-        android:textSize="30dp"
+        android:textSize="45dp"
         android:layout_centerHorizontal="true"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        android:nestedScrollingEnabled="false"
+        android:clickable="true"
+        />
 
     <Button
-        android:textStyle="italic"
         android:id="@+id/all_plants"
         android:layout_width="250dp"
         android:layout_height="75dp"
         android:layout_below="@id/my_garden"
         android:text="All Plants"
-        android:textSize="30dp"
+        android:textSize="45dp"
         android:textAllCaps="false"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:clickable="true" />
     <Button
         android:id="@+id/info"
-        android:typeface="serif"
         android:textStyle="italic"
         android:layout_width="250dp"
         android:layout_height="75dp"
         android:layout_below="@id/all_plants"
         android:text="Info"
-        android:textSize="30dp"
+        android:textSize="45dp"
         android:textAllCaps="false"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:clickable="true" />
 
 
 
