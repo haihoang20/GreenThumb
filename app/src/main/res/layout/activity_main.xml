@@ -13,6 +13,7 @@
         />
 
     <TextView
+        android:id="@+id/main_menu"
         android:textStyle="bold"
         android:background="#5E4731"
         android:layout_alignParentBottom="true"
@@ -24,7 +25,6 @@
         android:gravity="center"/>
 
     <Button
-        android:typeface="serif"
         android:textStyle="italic"
         android:layout_marginTop="90dp"
         android:id="@+id/my_garden"
@@ -37,7 +37,6 @@
         android:textAllCaps="false"/>
 
     <Button
-        android:typeface="serif"
         android:textStyle="italic"
         android:id="@+id/all_plants"
         android:layout_width="250dp"
@@ -48,6 +47,7 @@
         android:textAllCaps="false"
         android:layout_centerHorizontal="true"/>
     <Button
+        android:id="@+id/info"
         android:typeface="serif"
         android:textStyle="italic"
         android:layout_width="250dp"
