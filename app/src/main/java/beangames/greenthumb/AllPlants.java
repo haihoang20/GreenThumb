@@ -42,17 +42,13 @@ public class AllPlants extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-    public String getText(View v){
-        int i =  v.getId();
-        return current.toString();
-    }
 
     public void plantNextPage(View v){
         tv = (TextView) v;
         current = tv.getText().toString();
-        Intent intent = new Intent(getApplicationContext(),Plant.class);
-        intent.putExtra("name",current);
-        startActivity(intent);
+        Intent goToPlant = new Intent(getApplicationContext(),Plant.class);
+        goToPlant.putExtra("name",current);
+        startActivity(goToPlant);
 
     }
 }
