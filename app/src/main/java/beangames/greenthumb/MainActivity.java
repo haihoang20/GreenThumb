@@ -17,13 +17,14 @@ public class MainActivity extends Activity {
     private Button infoButton;
     private TextView mainMenuText;
     private TextView topBarText;
+    private PlantDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setFont();
-        PlantDatabase db = new PlantDatabase(this);
+        db = new PlantDatabase(this);
         //Plant test = db.get("Beans");
         //System.out.println(test.getName());
         //System.out.println(test.getHarvest());
@@ -88,7 +89,9 @@ public class MainActivity extends Activity {
         startActivity(new Intent(getApplicationContext(),Info.class));
     }
 
-
+    public PlantDatabase getPlantDataBase(){
+        return db;
+    }
 
 
 

@@ -9,9 +9,10 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 
-public class PlantActivity extends Activity {
+public class PlantActivity extends MainActivity {
 
     private String key;
+    private Plant p;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,9 @@ public class PlantActivity extends Activity {
         setContentView(R.layout.activity_plant);
         Intent intent = getIntent();
         key = intent.getExtras().getString("name");
-        Toast toast = Toast.makeText(this, key, Toast.LENGTH_LONG);
-        toast.show();
+        p = getPlant();
+        Toast toast1 = Toast.makeText(this, p.getName(), Toast.LENGTH_LONG);
+        toast1.show();
     }
 
 
@@ -44,6 +46,11 @@ public class PlantActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public Plant getPlant(){
+        PlantDatabase pdb = this.getPlantDataBase();
+        return pdb.get(key);
     }
 
 

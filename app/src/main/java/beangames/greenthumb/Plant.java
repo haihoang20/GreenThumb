@@ -6,24 +6,34 @@ package beangames.greenthumb;
 public class Plant {
 
     private String name;
-    private long[] sowing;      // pair of month and day
-    private long[] harvest;     // pair of month and day
-    private long[] maturity;    // long
+    private String sowing;      // pair of month and day
+    private String harvest;     // pair of month and day
+                                // [0] day of first month
+                                // [1] first month
+                                // [2] day of second month
+                                // [3] second month
+
+                                // Mid-January - March
+                                // [0] 15 Mid
+                                // [1] 1 January
+                                // [2] 1 absence of Mid, beginning of month
+                                // [3] 3 March
+
+    private long maturity;    // long
     private String watering;
     private String fertilization;
     private String depth;
     private String rowSpacing;
     private String plantSpacing;
 
-
     public Plant(String name, String sowing, String harvest, String maturity, String watering,
                  String fertilization, String depth, String rowSpacing, String plantSpacing) {
 
         this.name = name;
 
-        this.sowing = processDate(sowing);
-        this.harvest = processDate(harvest);
-        this.maturity = processDate(maturity);
+        this.sowing = sowing;  // array of longs
+        this.harvest = harvest; // array of longs
+        this.maturity = Long.parseLong(maturity); // array of longs
 
         this.watering = watering;
         this.fertilization = fertilization;
@@ -76,15 +86,15 @@ public class Plant {
         return name;
     }
 
-    public long[] getSowing() {
+    public String getSowing() {
         return sowing;
     }
 
-    public long[] getHarvest() {
+    public String getHarvest() {
         return harvest;
     }
 
-    public long[] getMaturity() {
+    public long getMaturity() {
         return maturity;
     }
 
@@ -107,8 +117,4 @@ public class Plant {
     public String getPlantSpacing() {
         return plantSpacing;
     }
-
-
-
-
 }
