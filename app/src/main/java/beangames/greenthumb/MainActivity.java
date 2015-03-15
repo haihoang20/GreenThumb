@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
     private TextView mainMenuText;
     private TextView topBarText;
     private PlantDatabase db;
+    private MyGarden eden;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +26,19 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         setFont();
         db = new PlantDatabase(this);
-        //Plant test = db.get("Beans");
-        //System.out.println(test.getName());
-        //System.out.println(test.getHarvest());
-        //System.out.println(test.getMaturity());
-        //System.out.println(test.getSeason());
-
+        eden = new MyGarden();
+        GardenStorage bj = new GardenStorage(this);
+        bj.writeStorage(eden);
+        MyGarden mg;
+        GardenStorage jb = new GardenStorage(this);
+        mg = jb.loadStorage();
+        System.out.println("!!!!!!!!!!!!!!!!!!");
+        System.out.println("!!!!!!!!!!!!!!!!!!");
+        System.out.println("!!!!!!!!!!!!!!!!!!");
+        System.out.println(mg.equals(eden));
+        System.out.println("!!!!!!!!!!!!!!!!!!");
+        System.out.println("!!!!!!!!!!!!!!!!!!");
+        System.out.println("!!!!!!!!!!!!!!!!!!");
     }
 
 
