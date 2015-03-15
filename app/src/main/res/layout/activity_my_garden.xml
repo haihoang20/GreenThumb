@@ -19,6 +19,7 @@
 
 
 
+
     <TextView
         android:id="@+id/my_garden_bottom"
         android:background="#5E4731"
@@ -30,6 +31,25 @@
         android:textColor="#ecf0f1"
         android:gravity="center"
         android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/wheelbarrow_image"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:src="@drawable/wheelbarrow"
+        android:layout_above="@id/my_garden_bottom"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_bar"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@id/wheelbarrow_image"
+        android:text="Unfortunately, this part of the app does not work right now =("
+        android:textSize="35dp"/>
 
 
 

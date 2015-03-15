@@ -12,6 +12,7 @@ public class MyGarden extends ActionBarActivity {
 
     private TextView topBar;
     private TextView bottomBar;
+    private TextView message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class MyGarden extends ActionBarActivity {
         setContentView(R.layout.activity_my_garden);
         topBar = (TextView)findViewById(R.id.top_bar);
         bottomBar = (TextView)findViewById(R.id.my_garden_bottom);
+        message = (TextView)findViewById(R.id.message);
         setFont();
     }
 
@@ -48,8 +50,11 @@ public class MyGarden extends ActionBarActivity {
     private void setFont(){
         String fontPath = "fonts/Chocolate.ttf";
         Typeface menu   = Typeface.createFromAsset(getAssets(),fontPath);
+        String fontPath1  = "fonts/Alittlesunshine.ttf";
+        Typeface plantText = Typeface.createFromAsset(getAssets(),fontPath1);
         topBar.setTypeface(menu);
         bottomBar.setTypeface(menu);
+        message.setTypeface(plantText);
     }
 
     @Override
