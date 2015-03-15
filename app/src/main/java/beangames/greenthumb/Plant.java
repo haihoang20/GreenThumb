@@ -14,20 +14,8 @@ import android.widget.Toast;
 public class Plant {
 
     private String name;
-
-    private long[] sowing;      // pair of month and day
-    private long[] harvest;     // pair of month and day
-                                // [0] day of first month
-                                // [1] first month
-                                // [2] day of second month
-                                // [3] second month
-
-                                // Mid-January - March
-                                // [0] 15 Mid
-                                // [1] 1 January
-                                // [2] 1 absence of Mid, beginning of month
-                                // [3] 3 March
-
+    private String sowing;
+    private String harvest;
     private long maturity;    // long
     private String watering;
     private String fertilization;
@@ -40,9 +28,9 @@ public class Plant {
 
         this.name = name;
 
-        this.sowing = processDate(sowing);  // array of longs
-        this.harvest = processDate(harvest); // array of longs
-        this.maturity = Long.parseLong(maturity); // array of longs
+        this.sowing = this.sowing;
+        this.harvest = this.harvest;
+        this.maturity = Long.parseLong(maturity);
 
 
         this.watering = watering;
@@ -54,6 +42,20 @@ public class Plant {
 
 
     private long[] processDate (String s) {
+
+        // pair of month and day
+        // pair of month and day
+        // [0] day of first month
+        // [1] first month
+        // [2] day of second month
+        // [3] second month
+
+        // Mid-January - March
+        // [0] 15 Mid
+        // [1] 1 January
+        // [2] 1 absence of Mid, beginning of month
+        // [3] 3 March
+
         long[] ret = new long[4];
         String month0 = "";
         String month1 = "";
@@ -103,13 +105,17 @@ public class Plant {
         return name;
     }
 
-    public long[] getSowing() {
-        return sowing;
+    public long[] getSowingArray() {
+        return processDate(sowing);
     }
 
-    public long[] getHarvest() {
-        return harvest;
+    public long[] getHarvestArray() {
+        return processDate(sowing);
     }
+
+    public String getSowing() { return sowing;}
+
+    public String getHarvest() { return harvest;}
 
     public long getMaturity() {
         return maturity;
