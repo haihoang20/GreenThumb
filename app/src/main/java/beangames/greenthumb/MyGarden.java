@@ -1,17 +1,25 @@
 package beangames.greenthumb;
 
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class MyGarden extends ActionBarActivity {
+
+    private TextView topBar;
+    private TextView bottomBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_garden);
+        topBar = (TextView)findViewById(R.id.top_bar);
+        bottomBar = (TextView)findViewById(R.id.my_garden_bottom);
+        setFont();
     }
 
 
@@ -35,5 +43,12 @@ public class MyGarden extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setFont(){
+        String fontPath = "fonts/Chocolate.ttf";
+        Typeface menu   = Typeface.createFromAsset(getAssets(),fontPath);
+        topBar.setTypeface(menu);
+        bottomBar.setTypeface(menu);
     }
 }
