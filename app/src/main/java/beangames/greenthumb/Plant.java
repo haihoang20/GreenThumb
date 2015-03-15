@@ -8,6 +8,17 @@ public class Plant {
     private String name;
     private long[] sowing;      // pair of month and day
     private long[] harvest;     // pair of month and day
+                                // [0] day of first month
+                                // [1] first month
+                                // [2] day of second month
+                                // [3] second month
+
+                                // Mid-January - March
+                                // [0] 15 Mid
+                                // [1] 1 January
+                                // [2] 1 absence of Mid, beginning of month
+                                // [3] 3 March
+
     private long[] maturity;    // long
     private String watering;
     private String fertilization;
@@ -21,9 +32,9 @@ public class Plant {
 
         this.name = name;
 
-        this.sowing = processDate(sowing);
-        this.harvest = processDate(harvest);
-        this.maturity = processDate(maturity);
+        this.sowing = processDate(sowing);  // array of longs
+        this.harvest = processDate(harvest); // array of longs
+        this.maturity = processDate(maturity); // array of longs
 
         this.watering = watering;
         this.fertilization = fertilization;
@@ -107,8 +118,4 @@ public class Plant {
     public String getPlantSpacing() {
         return plantSpacing;
     }
-
-
-
-
 }
