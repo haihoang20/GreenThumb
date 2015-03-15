@@ -1,6 +1,7 @@
 package beangames.greenthumb;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,11 +14,24 @@ import android.widget.TextView;
 public class AllPlants extends ActionBarActivity {
     private String current;
     private TextView tv;
+    private TextView allPlantsText;
+    private TextView topBarText;
+    private TextView beans;
+    private TextView beets;
+    private TextView broccoli;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_plants);
+
+        allPlantsText= (TextView)findViewById(R.id.all_plants_bottom);
+        topBarText  = (TextView)findViewById(R.id.top_bar);
+        beans = (TextView)findViewById(R.id.beans);
+        beets = (TextView)findViewById(R.id.beets);
+        broccoli = (TextView)findViewById(R.id.broccoli);
+
+        setFonts();
     }
 
 
@@ -54,5 +68,19 @@ public class AllPlants extends ActionBarActivity {
         intent.putExtra("name",current);
         startActivity(intent);
 
+    }
+
+    public void setFonts(){
+        String fontPath = "fonts/Chocolate.ttf";
+        String fontPath1  = "fonts/OlivesFont.ttf";
+
+        Typeface menu   = Typeface.createFromAsset(getAssets(),fontPath);
+        Typeface plantText = Typeface.createFromAsset(getAssets(),fontPath1);
+
+        allPlantsText.setTypeface(menu);
+        topBarText.setTypeface(menu);
+        beans.setTypeface(plantText);
+        beets.setTypeface(plantText);
+        broccoli.setTypeface(plantText);
     }
 }

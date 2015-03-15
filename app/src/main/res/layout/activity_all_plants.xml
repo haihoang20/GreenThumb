@@ -2,23 +2,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+
     tools:context="beangames.greenthumb.AllPlants"
     android:nestedScrollingEnabled="false">
+
+
 
     <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin">
+    >
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/top_bar"
+            android:background="#16a085"
+            android:text="GreenThumb"
+            android:textColor="#12806A"
+            android:textSize="65dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            />
 
         <TextView
             android:id="@+id/beans"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/top_bar"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Beans"
@@ -28,6 +39,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/beets"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Beets"
@@ -36,6 +48,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/broccoli"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Broccoli"
@@ -45,6 +58,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/brussels_sprout"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Brussels Sprout"
@@ -53,6 +67,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/cabbage"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Cabbage"
@@ -61,6 +76,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/carrot"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Carrot"
@@ -69,6 +85,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/cauliflower"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Cauliflower"
@@ -77,6 +94,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/celery"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Celery"
@@ -85,6 +103,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/corn"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Corn"
@@ -93,6 +112,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/cucumber"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Cucumber"
@@ -102,6 +122,7 @@
             android:nestedScrollingEnabled="false" />
         <TextView
             android:id="@+id/eggplant"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Eggplant"
@@ -110,6 +131,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/kale"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Kale"
@@ -118,6 +140,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/leek"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Leek"
@@ -126,6 +149,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/lettuce"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Lettuce"
@@ -134,6 +158,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/melon"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Melon"
@@ -142,6 +167,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/okra"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Okra"
@@ -150,6 +176,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/onion"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Onion"
@@ -158,6 +185,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/parsnip"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Parsnip"
@@ -166,6 +194,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/peas"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Peas"
@@ -176,6 +205,7 @@
             android:layout_alignParentEnd="true" />
         <TextView
             android:id="@+id/pepper"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Pepper"
@@ -184,6 +214,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/potato"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Potato"
@@ -192,6 +223,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/pumpkin"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Pumpkin"
@@ -200,6 +232,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/radish"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Radish"
@@ -208,6 +241,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/spinach"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Spinach"
@@ -216,6 +250,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/squash"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Squash"
@@ -224,6 +259,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/sweet_potato"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Sweet Potato"
@@ -232,6 +268,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/swiss_chard"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Swiss Chard"
@@ -240,6 +277,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/tomato"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Tomato"
@@ -248,6 +286,7 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/turnip"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Turnip"
@@ -256,12 +295,27 @@
             android:onClick="plantNextPage" />
         <TextView
             android:id="@+id/watermelon"
+            android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Watermelon"
             android:textSize="35dp"
             android:layout_below="@id/turnip"
             android:onClick="plantNextPage" />
+
+        <TextView
+            android:id="@+id/all_plants_bottom"
+            android:layout_below="@id/watermelon"
+            android:background="#5E4731"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="All Plants"
+            android:textSize="35dp"
+            android:textColor="#ecf0f1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
 
 
     </RelativeLayout>
