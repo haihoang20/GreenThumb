@@ -29,7 +29,6 @@ public class PlantActivity extends MainActivity {
     private TextView depth;
     private TextView rowSpacing;
     private TextView plantSpacing;
-    //private ImageView plantImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +39,6 @@ public class PlantActivity extends MainActivity {
         p = getPlant();
         setFonts();
         setDescription();
-//        plantImage = (ImageView)findViewById(R.id.picture);
-//        plantImage.setImageDrawable();
     }
 
 
@@ -76,15 +73,21 @@ public class PlantActivity extends MainActivity {
         String fontPath = "fonts/Chocolate.ttf";
         String fontPath1  = "fonts/OlivesFont.ttf";
         topBarText  = (TextView)findViewById(R.id.top_bar);
+        bottomBarText = (TextView)findViewById(R.id.plants_bottom);
         b = (Button)findViewById(R.id.add);
         Typeface button = Typeface.createFromAsset(getAssets(),fontPath1);
         Typeface menu   = Typeface.createFromAsset(getAssets(),fontPath);
         topBarText.setTypeface(menu);
+        bottomBarText.setTypeface(menu);
         b.setTypeface(button);
 
     }
 
     public void setDescription(){
+
+        String fontPath1  = "fonts/Alittlesunshine.ttf";
+        Typeface plantText = Typeface.createFromAsset(getAssets(),fontPath1);
+
         name = (TextView)findViewById(R.id.name);
         sowingSeasons = (TextView)findViewById(R.id.Sowing_Season_Description);
         bottomBarText = (TextView)findViewById(R.id.plants_bottom);
@@ -105,6 +108,15 @@ public class PlantActivity extends MainActivity {
         depth.setText(p.getDepth());
         rowSpacing.setText(p.getRowSpacing());
         plantSpacing.setText(p.getPlantSpacing());
+
+        sowingSeasons.setTypeface(plantText);
+        harvestTime.setTypeface(plantText);
+        timeToMaturity.setTypeface(plantText);
+        watering.setTypeface(plantText);
+        fertilization.setTypeface(plantText);
+        depth.setTypeface(plantText);
+        rowSpacing.setTypeface(plantText);
+        plantSpacing.setTypeface(plantText);
 
     }
 
