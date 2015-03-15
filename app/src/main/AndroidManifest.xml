@@ -33,7 +33,7 @@
             android:label="@string/title_activity_info" >
         </activity>
         <activity
-            android:name=".Plant"
+            android:name=".PlantActivity"
             android:label="@string/title_activity_plant" >
         </activity>
     </application>

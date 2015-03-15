@@ -3,7 +3,6 @@ package beangames.greenthumb;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,13 +23,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setFont();
-        /*myGardenButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent goToMyGarden = new Intent(getBaseContext(), MyGarden.class);
-                startActivity(goToMyGarden);
-            }
-        });*/
+        PlantDatabase db = new PlantDatabase(this);
+        //Plant test = db.get("Beans");
+        //System.out.println(test.getName());
+        //System.out.println(test.getHarvest());
+        //System.out.println(test.getMaturity());
+        //System.out.println(test.getSeason());
+
     }
 
 

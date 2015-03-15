@@ -1,29 +1,33 @@
 package beangames.greenthumb;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
+import android.widget.Toast;
 
 
-public class AllPlants extends ActionBarActivity {
-    private String current;
-    private TextView tv;
+public class PlantActivity extends Activity {
+
+    private String key;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_plants);
+        setContentView(R.layout.activity_plant);
+        Intent intent = getIntent();
+        key = intent.getExtras().getString("name");
+        Toast toast = Toast.makeText(this, key, Toast.LENGTH_LONG);
+        toast.show();
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_all_plants, menu);
+        getMenuInflater().inflate(R.menu.menu_plant, menu);
         return true;
     }
 
@@ -42,12 +46,6 @@ public class AllPlants extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void plantNextPage(View v){
-        tv = (TextView) v;
-        current = tv.getText().toString();
-        Intent goToPlant = new Intent(getApplicationContext(),PlantActivity.class);
-        goToPlant.putExtra("name",current);
-        startActivity(goToPlant);
 
-    }
+
 }

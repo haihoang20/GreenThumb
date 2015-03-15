@@ -1,0 +1,6 @@
+[Beans]
+<name> Beans
+<harvest> Mid-June - Mid-October
+<maturity> 65
+<season> Summer
+*
