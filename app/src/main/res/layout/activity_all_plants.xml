@@ -26,9 +26,20 @@
             android:layout_marginBottom="10dp"
             />
 
+
+        <ImageView
+            android:id="@+id/beans_image"
+            android:paddingLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/top_bar"
+            android:scaleType="fitXY"
+            android:src="@drawable/beans"
+            />
         <TextView
             android:id="@+id/beans"
-            android:paddingLeft="10dp"
+            android:layout_toRightOf="@id/beans_image"
+            android:paddingLeft="5dp"
             android:layout_below="@id/top_bar"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -37,18 +48,38 @@
             android:clickable="true"
             android:linksClickable="false"
             android:onClick="plantNextPage" />
+        <ImageView
+            android:id="@+id/beets_image"
+            android:paddingLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/beans"
+            android:scaleType="fitXY"
+            android:src="@drawable/beets"
+            />
         <TextView
             android:id="@+id/beets"
-            android:paddingLeft="10dp"
+            android:layout_toRightOf="@id/beets_image"
+            android:paddingLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Beets"
             android:textSize="35dp"
             android:layout_below="@id/beans"
             android:onClick="plantNextPage" />
+        <ImageView
+            android:id="@+id/broc_image"
+            android:paddingLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/beets"
+            android:scaleType="fitXY"
+            android:src="@drawable/broccoli"
+            />
         <TextView
             android:id="@+id/broccoli"
-            android:paddingLeft="10dp"
+            android:layout_toRightOf="@id/broc_image"
+            android:paddingLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Broccoli"
@@ -56,60 +87,121 @@
             android:layout_below="@id/beets"
             android:nestedScrollingEnabled="true"
             android:onClick="plantNextPage" />
+        <ImageView
+            android:id="@+id/brus_image"
+            android:paddingLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/broccoli"
+            android:scaleType="fitXY"
+            android:src="@drawable/brusselsprouts"
+            />
         <TextView
             android:id="@+id/brussels_sprout"
-            android:paddingLeft="10dp"
+            android:paddingLeft="5dp"
+            android:layout_toRightOf="@id/brus_image"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Brussels Sprout"
             android:textSize="35dp"
             android:layout_below="@id/broccoli"
             android:onClick="plantNextPage" />
+        <ImageView
+            android:id="@+id/cabbage_image"
+            android:paddingLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/brussels_sprout"
+            android:scaleType="fitXY"
+            android:src="@drawable/cabbage"
+            />
         <TextView
             android:id="@+id/cabbage"
-            android:paddingLeft="10dp"
+            android:layout_toRightOf="@id/cabbage_image"
+            android:paddingLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Cabbage"
             android:textSize="35dp"
             android:layout_below="@id/brussels_sprout"
             android:onClick="plantNextPage" />
+        <ImageView
+            android:id="@+id/carrot_image"
+            android:paddingLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/cabbage"
+            android:scaleType="fitXY"
+            android:src="@drawable/carrot"
+            />
         <TextView
             android:id="@+id/carrot"
-            android:paddingLeft="10dp"
+            android:paddingLeft="5dp"
+            android:layout_toRightOf="@id/carrot_image"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Carrot"
             android:textSize="35dp"
             android:layout_below="@id/cabbage"
             android:onClick="plantNextPage" />
+        <ImageView
+            android:id="@+id/cauliflower_image"
+            android:paddingLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/carrot"
+            android:scaleType="fitXY"
+            android:src="@drawable/cauliflower"
+            />
         <TextView
             android:id="@+id/cauliflower"
-            android:paddingLeft="10dp"
+            android:layout_toRightOf="@id/cabbage_image"
+            android:paddingLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Cauliflower"
             android:textSize="35dp"
             android:layout_below="@id/carrot"
             android:onClick="plantNextPage" />
+        <ImageView
+            android:id="@+id/celery_image"
+            android:paddingLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/cauliflower"
+            android:scaleType="fitXY"
+            android:src="@drawable/celery"
+            />
         <TextView
             android:id="@+id/celery"
-            android:paddingLeft="10dp"
+            android:layout_toRightOf="@id/celery_image"
+            android:paddingLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Celery"
             android:textSize="35dp"
             android:layout_below="@id/cauliflower"
             android:onClick="plantNextPage" />
+        <ImageView
+            android:id="@+id/corn_image"
+            android:paddingLeft="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/celery"
+            android:scaleType="fitXY"
+            android:src="@drawable/corn"
+            />
         <TextView
             android:id="@+id/corn"
-            android:paddingLeft="10dp"
+            android:paddingLeft="5dp"
+            android:layout_toRightOf="@id/corn_image"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:text="Corn"
             android:textSize="35dp"
             android:layout_below="@id/celery"
             android:onClick="plantNextPage" />
+
         <TextView
             android:id="@+id/cucumber"
             android:paddingLeft="10dp"
