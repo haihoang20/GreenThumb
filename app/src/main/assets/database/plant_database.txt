@@ -14,7 +14,7 @@
 <name> Beets
 <sowing> Mid-April - June
 <harvest> Mid-July - November
-<maturity> 57 
+<maturity> 57
 <watering> Only during drought conditions
 <fertilization> At time of planting
 <depth> 0.5 - 1
@@ -26,7 +26,7 @@
 <name> Broccoli
 <sowing> April - May
 <harvest> June - Mid-October
-<maturity> 80 
+<maturity> 80
 <watering> Only during drought conditions
 <fertilization> Three weeks after transplanting
 <depth> 0.5 - 1
@@ -38,22 +38,22 @@
 <name> Brussels Sprout
 <sowing> Mid-March - Mid-May
 <harvest> Mid-October - March 
-<maturity> 95 
+<maturity> 95
 <watering> At transplanting
 <fertilization> Three weeks after transplanting
-<depth>  0.25 - 0.5 
+<depth>  0.25 - 0.5
 <rowSpacing> 24 - 36
-<plantSpacing> 24 
+<plantSpacing> 24
 *
 
 [Cabbage]
 <name> Cabbage
 <sowing> April - May
 <harvest> Mid-June - Mid-October
-<maturity> 105 
-<watering> Two to three weeks before harvest 
+<maturity> 105
+<watering> Two to three weeks before harvest
 <fertilization> Three weeks after transplanting
-<depth> 0.5 - 1 
+<depth> 0.5 - 1
 <rowSpacing> 24 - 36
 <plantSpacing> 12 - 24
 *
@@ -62,9 +62,9 @@
 <name> Carrot
 <sowing> April - June
 <harvest> Mid-July - November
-<maturity> 77 
+<maturity> 77
 <watering> Only during drought conditions
-<fertilization>  Preferably in the fall for the following spring   
+<fertilization>  Preferably in the fall for the following spring
 <depth> 0.5
 <rowSpacing> 16 - 24
 <plantSpacing> 1 - 3
@@ -74,10 +74,10 @@
 <name> Cauliflower
 <sowing> Mid-March - Mid-May
 <harvest> Mid-June - Mid-October
-<maturity> 60 
+<maturity> 60
 <watering> Once, three weeks before harvest
 <fertilization> Three weeks after transplanting 
-<depth>  1.5 - 1
+<depth> 1.5 - 1
 <rowSpacing> 24 - 30
 <plantSpacing> 18 - 24
 *
@@ -86,19 +86,19 @@
 <name> Celery
 <sowing> Mid-May - June
 <harvest> August - October  
-<maturity> 105 
+<maturity> 105
 <watering> Once a week
 <fertilization> At time of transplanting
 <depth> 0.25 - 0.5
 <rowSpacing> 24 - 36
-<plantSpacing> 6 - 10 
+<plantSpacing> 6 - 10
 *
 
 [Corn]
 <name> Corn
 <sowing> Mid-May - Mid-June
 <harvest> August - Mid-October
-<maturity> 87 
+<maturity> 87
 <watering> When tassels appear and cobs start to swell
 <fertilization> When 8-10 inches tall, and again when first silk appears
 <depth> 1 - 2
@@ -134,11 +134,11 @@
 <name> Kale
 <sowing> April - May
 <harvest> July - March
-<maturity> 55 
+<maturity> 55
 <watering> Frequently
 <fertilization> 1-2 times per summer
 <depth> 0.5 - 1
-<rowSpacing> 24 - 30 
+<rowSpacing> 24 - 30
 <plantSpacing> 12 - 18
 *
 
@@ -146,7 +146,7 @@
 <name> Leek
 <sowing>  April - May
 <harvest>  Mid-August - Mid-March 
-<maturity> 135 
+<maturity> 135
 <watering> Twice a week
 <fertilization>  1-2 weeks before planting
 <depth> 0.5
@@ -158,7 +158,7 @@
 <name> Lettuce
 <sowing> Mid-March - Mid-September
 <harvest> May - Mid-November
-<maturity> 80 
+<maturity> 80
 <watering> Once a week
 <fertilization> Two-three weeks after transplanting 
 <depth> 0.5 
@@ -170,7 +170,7 @@
 <name> Melon
 <sowing> Mid-May - June 
 <harvest> August - Mid-October
-<maturity> 85 
+<maturity> 85
 <watering> Once a week
 <fertilization> One week after bloom, and again three weeks
 <depth> 1
@@ -182,7 +182,7 @@
 <name> Okra
 <sowing> Mid-May - June 
 <harvest> June - Mid-October
-<maturity> 85 
+<maturity> 85
 <watering> Once a week
 <fertilization> One week after bloom, and again three weeks
 <depth> 1
@@ -197,7 +197,7 @@
 <maturity> 70
 <watering> Only during drought conditions
 <fertilization> When bulbs begin to swell and again when plants are one foot tall
-<depth> 2 -3 
+<depth> 2 -3
 <rowSpacing> 12 - 24
 <plantSpacing> 4 - 6
 *
@@ -227,7 +227,6 @@
 <plantSpacing> 2 - 3
 *
 
-
 [Pepper]
 <name> Pepper
 <sowing> May - June
@@ -244,7 +243,7 @@
 <name> Potato
 <sowing> April - Mid-June
 <harvest> Mid-August - Mid-October
-<maturity> 115
+<maturity> 99
 <watering> Regularly when tubers start to form 
 <fertilization> At bloom time or time of second hiling
 <depth> 3 - 4
@@ -275,7 +274,6 @@
 <rowSpacing> 12 - 18
 <plantSpacing> 1 - 2
 *
-
 
 [Radish]
 <name> Radish
@@ -330,7 +328,7 @@
 <sowing> Mid-April - Mid-August
 <harvest> Mid-June - February
 <maturity> 55
-<watering> Regulary
+<watering> Regularly
 <fertilization> Two to three weeks before planting
 <depth> 0.5 - 1
 <rowSpacing> 6 - 12
