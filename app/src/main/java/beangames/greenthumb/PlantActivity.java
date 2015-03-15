@@ -29,7 +29,7 @@ public class PlantActivity extends MainActivity {
     private TextView depth;
     private TextView rowSpacing;
     private TextView plantSpacing;
-    private ImageView plantImage;
+    //private ImageView plantImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,8 @@ public class PlantActivity extends MainActivity {
         p = getPlant();
         setFonts();
         setDescription();
-        plantImage = (ImageView)findViewById(R.id.picture);
+//        plantImage = (ImageView)findViewById(R.id.picture);
+//        plantImage.setImageDrawable();
     }
 
 
