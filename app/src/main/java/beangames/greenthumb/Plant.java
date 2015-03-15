@@ -6,8 +6,8 @@ package beangames.greenthumb;
 public class Plant {
 
     private String name;
-    private String sowing;      // pair of month and day
-    private String harvest;     // pair of month and day
+    private long[] sowing;      // pair of month and day
+    private long[] harvest;     // pair of month and day
                                 // [0] day of first month
                                 // [1] first month
                                 // [2] day of second month
@@ -31,8 +31,8 @@ public class Plant {
 
         this.name = name;
 
-        this.sowing = sowing;  // array of longs
-        this.harvest = harvest; // array of longs
+        this.sowing = processDate(sowing);  // array of longs
+        this.harvest = processDate(harvest); // array of longs
         this.maturity = Long.parseLong(maturity); // array of longs
 
         this.watering = watering;
@@ -45,8 +45,15 @@ public class Plant {
 
     private long[] processDate(String s) {
         long[] ret = new long[4];
-        String month0 = s.substring(0, s.indexOf("-") - 1);
-        String month1 = s.substring(s.indexOf("-") + 1, s.length());
+        String month0 = "";
+        String month1 = "";
+        for (int i=0; i<s.length(); i++) {
+            if (s.charAt(i) == ' ') {
+                month0 = s.substring(0, i);
+                month1 = s.substring(i + 3, s.length());
+                break;
+            }
+        }
         if (month0.contains("Mid")) ret[0] = 15;
         else ret[0] = 1;
 
@@ -86,11 +93,11 @@ public class Plant {
         return name;
     }
 
-    public String getSowing() {
+    public long[] getSowing() {
         return sowing;
     }
 
-    public String getHarvest() {
+    public long[] getHarvest() {
         return harvest;
     }
 
