@@ -14,7 +14,9 @@ import java.io.Serializable;
 /**
  * Created by jastine on 2015-03-14.
  */
+
 public class Plant implements Serializable {
+
 
     private String name;
     private String sowing;
@@ -31,8 +33,8 @@ public class Plant implements Serializable {
 
         this.name = name;
 
-        this.sowing = this.sowing;
-        this.harvest = this.harvest;
+        this.sowing = sowing;
+        this.harvest = harvest;
         this.maturity = Long.parseLong(maturity);
 
 

@@ -1,5 +1,5 @@
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,11 +9,13 @@
 
 
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <TextView
             android:textStyle="bold"
             android:id="@+id/top_bar"
@@ -24,27 +26,56 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginBottom="10dp"
             />
+
+        <TextView
+            android:id="@+id/name"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/top_bar"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:textSize="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/picture"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/top_bar"
+            android:layout_toLeftOf="@id/name"
+            />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar"
+            android:text="Add to MyGarden"
+            android:textSize="35dp"
+            android:textAllCaps="false"
+            android:layout_toRightOf="@id/name"
+            android:onClick="addPlantList" />
 
         <TextView
             android:id="@+id/Sowing_Season_Title"
             android:textStyle="bold"
             android:paddingLeft="10dp"
-            android:layout_below="@id/top_bar"
+            android:layout_below="@id/add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sowing Season:"
-            android:textSize="30dp"
-            android:layout_marginBottom="10dp"
+            android:textSize="25dp"
+            android:layout_marginBottom="2dp"
              />
         <TextView
             android:id="@+id/Sowing_Season_Description"
             android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description Descriptio nDescription escription"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Sowing_Season_Title"
             android:layout_marginBottom="10dp"
              />
@@ -56,19 +87,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Harvest Time:"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Sowing_Season_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Harvest_Time_Description"
             android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description Descriptio nDescription escription"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Harvest_Time_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -78,19 +108,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Time to Maturity:"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Harvest_Time_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Time_to_Maturity_Description"
             android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description Descriptio nDescription escription"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Time_to_Maturity_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -100,19 +129,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Watering:"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Time_to_Maturity_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Watering_Requirements_Description"
             android:paddingLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description Descriptio nDescription escription"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Watering_Requirements_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -122,10 +150,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fertilization:"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Watering_Requirements_Description"
-            android:layout_marginBottom="10dp"
-
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Fertilization_Description"
@@ -133,9 +160,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description Descriptio nDescription escription"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Fertilization_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -145,9 +172,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Seed Depth (Inches):"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Fertilization_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Seed_Depth_Description"
@@ -155,9 +182,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description Descriptio nDescription escription"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Seed_Depth_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -167,9 +194,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Row Spacing (Inches):"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Seed_Depth_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Row_Spacing_Description"
@@ -177,9 +204,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description Descriptio nDescription escription"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Row_Spacing_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -189,9 +216,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Plant Spacing (Inches):"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Row_Spacing_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Plant_Spacing_Description"
@@ -199,28 +226,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Description Descriptio nDescription escription"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_below="@id/Plant_Spacing_Title"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="50dp"
             />
 
-        <TextView
-            android:id="@+id/plants_bottom"
-            android:layout_below="@id/Plant_Spacing_Description"
-            android:background="#5E4731"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Plant"
-            android:textSize="35dp"
-            android:textColor="#ecf0f1"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"/>
 
 
-    </RelativeLayout>
-</ScrollView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/plants_bottom"
+        android:background="#5E4731"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Plant"
+        android:textSize="35dp"
+        android:textColor="#ecf0f1"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+</RelativeLayout>
 
 
 
