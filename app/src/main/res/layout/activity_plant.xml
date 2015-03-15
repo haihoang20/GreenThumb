@@ -1,5 +1,5 @@
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,11 +9,13 @@
 
 
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
         <TextView
             android:textStyle="bold"
             android:id="@+id/top_bar"
@@ -226,26 +228,28 @@
             android:text="Description Descriptio nDescription escription"
             android:textSize="25dp"
             android:layout_below="@id/Plant_Spacing_Title"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="50dp"
             />
 
-        <TextView
-            android:id="@+id/plants_bottom"
-            android:layout_below="@id/Plant_Spacing_Description"
-            android:background="#5E4731"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Plant"
-            android:textSize="35dp"
-            android:textColor="#ecf0f1"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"/>
 
 
-    </RelativeLayout>
-</ScrollView>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/plants_bottom"
+        android:background="#5E4731"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Plant"
+        android:textSize="35dp"
+        android:textColor="#ecf0f1"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+</RelativeLayout>
 
 
 
