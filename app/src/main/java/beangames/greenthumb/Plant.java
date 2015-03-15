@@ -28,8 +28,8 @@ public class Plant {
 
         this.name = name;
 
-        this.sowing = this.sowing;
-        this.harvest = this.harvest;
+        this.sowing = sowing;
+        this.harvest = harvest;
         this.maturity = Long.parseLong(maturity);
 
 
