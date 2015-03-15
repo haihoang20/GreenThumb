@@ -12,40 +12,7 @@ import android.widget.TextView;
 
 
 public class AllPlants extends ActionBarActivity {
-    private String current;
-    private TextView tv;
-    private TextView allPlantsText;
-    private TextView topBarText;
-    private TextView beans;
-    private TextView beets;
-    private TextView broccoli;
-    private TextView brusselSprouts;
-    private TextView cabbage;
-    private TextView carrot;
-    private TextView cauliflower;
-    private TextView celery;
-    private TextView corn;
-    private TextView cucumber;
-    private TextView eggplant;
-    private TextView kale;
-    private TextView leek;
-    private TextView lettuce;
-    private TextView melon;
-    private TextView okra;
-    private TextView onion;
-    private TextView parsnip;
-    private TextView peas;
-    private TextView pepper;
-    private TextView potato;
-    private TextView pumpkin;
-    private TextView radish;
-    private TextView spinach;
-    private TextView squash;
-    private TextView sweetPotato;
-    private TextView swissChard;
-    private TextView tomato;
-    private TextView turnip;
-    private TextView watermelon;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
