@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ecf0f1"
     tools:context="beangames.greenthumb.MyGarden">
 
     <TextView
@@ -17,13 +18,7 @@
         />
 
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/top_bar"
-        android:layout_above="@id/my_garden_bottom">
 
-        </ScrollView>
 
 
     <TextView
