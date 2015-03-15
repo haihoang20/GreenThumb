@@ -90,6 +90,9 @@ public class PlantDatabase implements Serializable {
                             plantSpacing = line.substring(line.indexOf(">") + 2, line.length());
                         }
                     }
+                    Plant tempPlant = new Plant(name,sowing,harvest,maturity,watering,fertilization,
+                            depth,rowSpacing,plantSpacing);
+                    database.put(name,tempPlant);
                 }
             }
             istream.close();

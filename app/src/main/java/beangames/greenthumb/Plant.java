@@ -15,7 +15,6 @@ public class Plant {
     private String rowSpacing;
     private String plantSpacing;
 
-
     public Plant(String name, String sowing, String harvest, String maturity, String watering,
                  String fertilization, String depth, String rowSpacing, String plantSpacing) {
         this.name = name;
