@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ public class PlantActivity extends MainActivity {
     private TextView depth;
     private TextView rowSpacing;
     private TextView plantSpacing;
+    private ImageView plantImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,7 @@ public class PlantActivity extends MainActivity {
         p = getPlant();
         setFonts();
         setDescription();
+        plantImage = (ImageView)findViewById(R.id.picture);
     }
 
 
