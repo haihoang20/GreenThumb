@@ -55,7 +55,7 @@
             android:textSize="35dp"
             android:textAllCaps="false"
             android:layout_toRightOf="@id/name"
-            />
+            android:onClick="addPlantList" />
 
         <TextView
             android:id="@+id/Sowing_Season_Title"

@@ -7,17 +7,21 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class PlantActivity extends MainActivity {
+
+public class PlantActivity extends MainActivity{
 
     private String key;
     private Plant p;
-    private Button b;
+    private Button addbutton;
     private TextView topBarText;
     private TextView bottomBarText;
     private TextView name;
@@ -29,6 +33,7 @@ public class PlantActivity extends MainActivity {
     private TextView depth;
     private TextView rowSpacing;
     private TextView plantSpacing;
+    private List<Plant> plants = new ArrayList<Plant>();
     //private ImageView plantImage;
 
     @Override
@@ -67,20 +72,17 @@ public class PlantActivity extends MainActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public Plant getPlant(){
-        PlantDatabase pdb = this.getPlantDataBase();
-        return pdb.get(key);
-    }
+
 
     public void setFonts(){
         String fontPath = "fonts/Chocolate.ttf";
         String fontPath1  = "fonts/OlivesFont.ttf";
         topBarText  = (TextView)findViewById(R.id.top_bar);
-        b = (Button)findViewById(R.id.add);
+        addbutton = (Button)findViewById(R.id.add);
         Typeface button = Typeface.createFromAsset(getAssets(),fontPath1);
         Typeface menu   = Typeface.createFromAsset(getAssets(),fontPath);
         topBarText.setTypeface(menu);
-        b.setTypeface(button);
+        addbutton.setTypeface(button);
 
     }
 
@@ -107,6 +109,16 @@ public class PlantActivity extends MainActivity {
         plantSpacing.setText(p.getPlantSpacing());
 
     }
+    public void addPlantList(View v) {
+        plants.add(p);
+        Intent intent = new Intent(this,MyGarden.class);
+        intent.putExtra("myPlant",p);
+        startActivity(intent);
+    }
 
+    public Plant getPlant(){
+        PlantDatabase db = getPlantDataBase();
+        return db.get(key);
+    }
 
 }

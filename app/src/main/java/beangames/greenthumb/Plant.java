@@ -8,10 +8,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.Serializable;
+
 /**
  * Created by jastine on 2015-03-14.
  */
-public class Plant {
+public class Plant implements Serializable{
 
     private String name;
     private String sowing;
