@@ -31,7 +31,7 @@
             android:paddingLeft="10dp"
             android:layout_below="@id/top_bar"
             android:layout_width="150dp"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:textSize="35dp"
             android:layout_marginBottom="10dp"
             android:layout_centerHorizontal="true"
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:text="Sowing Season:"
             android:textSize="25dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
              />
         <TextView
             android:id="@+id/Sowing_Season_Description"
@@ -87,7 +87,7 @@
             android:text="Harvest Time:"
             android:textSize="25dp"
             android:layout_below="@id/Sowing_Season_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Harvest_Time_Description"
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:textSize="25dp"
             android:layout_below="@id/Harvest_Time_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -108,7 +108,7 @@
             android:text="Time to Maturity:"
             android:textSize="25dp"
             android:layout_below="@id/Harvest_Time_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Time_to_Maturity_Description"
@@ -129,7 +129,7 @@
             android:text="Watering:"
             android:textSize="25dp"
             android:layout_below="@id/Time_to_Maturity_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Watering_Requirements_Description"
@@ -150,7 +150,7 @@
             android:text="Fertilization:"
             android:textSize="25dp"
             android:layout_below="@id/Watering_Requirements_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Fertilization_Description"
@@ -160,7 +160,7 @@
             android:text="Description Descriptio nDescription escription"
             android:textSize="25dp"
             android:layout_below="@id/Fertilization_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -172,7 +172,7 @@
             android:text="Seed Depth (Inches):"
             android:textSize="25dp"
             android:layout_below="@id/Fertilization_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Seed_Depth_Description"
@@ -182,7 +182,7 @@
             android:text="Description Descriptio nDescription escription"
             android:textSize="25dp"
             android:layout_below="@id/Seed_Depth_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -194,7 +194,7 @@
             android:text="Row Spacing (Inches):"
             android:textSize="25dp"
             android:layout_below="@id/Seed_Depth_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Row_Spacing_Description"
@@ -204,7 +204,7 @@
             android:text="Description Descriptio nDescription escription"
             android:textSize="25dp"
             android:layout_below="@id/Row_Spacing_Title"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             />
 
         <TextView
@@ -216,7 +216,7 @@
             android:text="Plant Spacing (Inches):"
             android:textSize="25dp"
             android:layout_below="@id/Row_Spacing_Description"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="2dp"
             />
         <TextView
             android:id="@+id/Plant_Spacing_Description"
@@ -226,7 +226,7 @@
             android:text="Description Descriptio nDescription escription"
             android:textSize="25dp"
             android:layout_below="@id/Plant_Spacing_Title"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="0dp"
             />
 
         <TextView
