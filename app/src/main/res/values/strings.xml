@@ -7,5 +7,6 @@
     <string name="title_activity_my_garden">MyGarden</string>
     <string name="title_activity_all_plants">all_plants</string>
     <string name="title_activity_info">Info</string>
+    <string name="title_activity_plant">Plant</string>
 
 </resources>
