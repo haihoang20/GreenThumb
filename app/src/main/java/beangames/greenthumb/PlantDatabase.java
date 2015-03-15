@@ -51,42 +51,45 @@ public class PlantDatabase implements Serializable {
                 if (line.startsWith("[") && line.endsWith("]")) {
                     // process all plant's fields
                     String name = "";
-                    String harvestTime = "";
+                    String sowing = "";
+                    String harvest = "";
                     String maturity = "";
-                    String season = "";
+                    String watering = "";
+                    String fertilization = "";
+                    String depth = "";
+                    String rowSpacing = "";
+                    String plantSpacing = "";
                     while (!(line = buf.readLine()).equals("*")) {
 
                         if (line.contains("<name>")) {
                             name = line.substring(line.indexOf(">") + 2, line.length());
                         }
                         if (line.contains("<sowing>")) {
-                            harvestTime = line.substring(line.indexOf(">") + 2, line.length());
+                            sowing = line.substring(line.indexOf(">") + 2, line.length());
                         }
                         if (line.contains("harvest")) {
-                            maturity = line.substring(line.indexOf(">") + 2, line.length());
+                            harvest = line.substring(line.indexOf(">") + 2, line.length());
                         }
                         if (line.contains("<maturity>")) {
-                            season = line.substring(line.indexOf(">") + 2, line.length());
+                            maturity = line.substring(line.indexOf(">") + 2, line.length());
                         }
                         if (line.contains("<watering>")) {
-                            season = line.substring(line.indexOf(">") + 2, line.length());
+                            watering = line.substring(line.indexOf(">") + 2, line.length());
                         }
                         if (line.contains("<fertilization>")) {
-                            season = line.substring(line.indexOf(">") + 2, line.length());
+                            fertilization = line.substring(line.indexOf(">") + 2, line.length());
                         }
                         if (line.contains("<depth>")) {
-                            season = line.substring(line.indexOf(">") + 2, line.length());
+                            depth = line.substring(line.indexOf(">") + 2, line.length());
                         }
                         if (line.contains("<rowSpacing>")) {
-                            season = line.substring(line.indexOf(">") + 2, line.length());
+                            rowSpacing = line.substring(line.indexOf(">") + 2, line.length());
                         }
 
                         if (line.contains("<plantSpacing>")) {
-                            season = line.substring(line.indexOf(">") + 2, line.length());
+                            plantSpacing = line.substring(line.indexOf(">") + 2, line.length());
                         }
                     }
-                    //Plant tempPlant = new Plant(name, sowing, harvestTime, maturity, );
-                    //database.put(name, tempPlant);
                 }
             }
             istream.close();
@@ -104,6 +107,7 @@ public class PlantDatabase implements Serializable {
 
     public void writeDatabase() {
         OutputStream ostream = null;
+        String databasePath  = "database/plant_database.txt";
         try {
             presentActivity.getApplicationContext().getFileStreamPath("plant_database.txt");
             File file = new File("plant_database.txt"); //I have no idea what I am doing :D
@@ -129,9 +133,14 @@ public class PlantDatabase implements Serializable {
                 bw.write("<watering> " + temp.getName() + "\n");
 
                 bw.write("<fertilization> " + temp.getFertilization() + "\n");
+
                 bw.write("<depth> " + temp.getDepth() + "\n");
+
                 bw.write("<rowSpacing> " + temp.getRowSpacing() + "\n");
+
                 bw.write("<plantSpacing> " + temp.getPlantSpacing() + "\n");
+
+                bw.write("*");
 
                 bw.write("\n");
                 //bw.newLine();

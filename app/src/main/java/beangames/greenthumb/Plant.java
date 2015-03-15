@@ -62,6 +62,7 @@ public class Plant {
     public String getRowSpacing() {
         return rowSpacing;
     }
+
     public String getPlantSpacing() {
         return plantSpacing;
     }
