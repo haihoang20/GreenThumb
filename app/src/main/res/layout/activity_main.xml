@@ -81,6 +81,18 @@
         android:src="@drawable/garden"
         />
 
+    <ImageView
+        android:id="@+id/vines_image"
+        android:paddingLeft="5dp"
+        android:layout_width="240dp"
+        android:layout_height="420dp"
+        android:layout_above="@id/main_menu"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/vines"
+        />
+
 
 
 </RelativeLayout>

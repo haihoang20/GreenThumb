@@ -122,6 +122,7 @@ public class PlantActivity extends MainActivity{
         depth.setTypeface(plantText);
         rowSpacing.setTypeface(plantText);
         plantSpacing.setTypeface(plantText);
+        name.setTypeface(plantText);
 
     }
     public void addPlantList(View v) {

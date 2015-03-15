@@ -28,12 +28,19 @@
         android:gravity="center"
         android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/pile_image"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@id/bottom_bar"
+        android:src="@drawable/pile"/>
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/top_bar"
-        android:layout_above="@id/bottom_bar">
+        android:layout_above="@id/pile_image">
         <TextView
             android:id="@+id/thank_you"
             android:layout_width="match_parent"
