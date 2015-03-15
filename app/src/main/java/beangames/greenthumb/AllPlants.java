@@ -68,7 +68,7 @@ public class AllPlants extends ActionBarActivity {
 
     public void setFonts(){
         String fontPath = "fonts/Chocolate.ttf";
-        String fontPath1  = "fonts/OlivesFont.ttf";
+        String fontPath1  = "fonts/RockSalmon.ttf";
 
         Typeface menu   = Typeface.createFromAsset(getAssets(),fontPath);
         Typeface plantText = Typeface.createFromAsset(getAssets(),fontPath1);
