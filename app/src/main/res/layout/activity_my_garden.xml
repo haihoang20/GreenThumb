@@ -1,12 +1,38 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ecf0f1"
     tools:context="beangames.greenthumb.MyGarden">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/top_bar"
+        android:background="#16a085"
+        android:text="GreenThumb"
+        android:textColor="#12806A"
+        android:textSize="65dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        />
+
+
+
+
+
+    <TextView
+        android:id="@+id/my_garden_bottom"
+        android:background="#5E4731"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="My Garden"
+        android:textSize="35dp"
+        android:textColor="#ecf0f1"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+
 
 </RelativeLayout>

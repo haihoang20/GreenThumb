@@ -1,32 +1,40 @@
 package beangames.greenthumb;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
-public class MyGarden extends ActionBarActivity {
+public class PlantActivity extends MainActivity {
 
-    private TextView topBar;
-    private TextView bottomBar;
+    private String key;
+    private Plant p;
+    private TextView topBarText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_garden);
-        topBar = (TextView)findViewById(R.id.top_bar);
-        bottomBar = (TextView)findViewById(R.id.my_garden_bottom);
-        setFont();
+        setContentView(R.layout.activity_plant);
+        Intent intent = getIntent();
+        key = intent.getExtras().getString("name");
+        p = getPlant();
+        Toast toast1 = Toast.makeText(this, p.getName(), Toast.LENGTH_LONG);
+        toast1.show();
+        topBarText  = (TextView)findViewById(R.id.top_bar);
+        setFonts();
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_my_garden, menu);
+        getMenuInflater().inflate(R.menu.menu_plant, menu);
         return true;
     }
 
@@ -45,10 +53,22 @@ public class MyGarden extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void setFont(){
-        String fontPath = "fonts/Chocolate.ttf";
-        Typeface menu   = Typeface.createFromAsset(getAssets(),fontPath);
-        topBar.setTypeface(menu);
-        bottomBar.setTypeface(menu);
+    public Plant getPlant(){
+        PlantDatabase pdb = this.getPlantDataBase();
+        return pdb.get(key);
     }
+
+    public void setFonts(){
+        String fontPath = "fonts/Chocolate.ttf";
+
+
+        Typeface menu   = Typeface.createFromAsset(getAssets(),fontPath);
+
+
+
+        topBarText.setTypeface(menu);
+
+    }
+
+
 }

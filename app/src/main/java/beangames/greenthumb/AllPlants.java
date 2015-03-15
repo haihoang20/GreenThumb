@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -19,6 +18,33 @@ public class AllPlants extends ActionBarActivity {
     private TextView beans;
     private TextView beets;
     private TextView broccoli;
+    private TextView brusselSprouts;
+    private TextView cabbage;
+    private TextView carrot;
+    private TextView cauliflower;
+    private TextView celery;
+    private TextView corn;
+    private TextView cucumber;
+    private TextView eggplant;
+    private TextView kale;
+    private TextView leek;
+    private TextView lettuce;
+    private TextView melon;
+    private TextView okra;
+    private TextView onion;
+    private TextView parsnip;
+    private TextView peas;
+    private TextView pepper;
+    private TextView potato;
+    private TextView pumpkin;
+    private TextView radish;
+    private TextView spinach;
+    private TextView squash;
+    private TextView sweetPotato;
+    private TextView swissChard;
+    private TextView tomato;
+    private TextView turnip;
+    private TextView watermelon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +56,33 @@ public class AllPlants extends ActionBarActivity {
         beans = (TextView)findViewById(R.id.beans);
         beets = (TextView)findViewById(R.id.beets);
         broccoli = (TextView)findViewById(R.id.broccoli);
+        brusselSprouts = (TextView)findViewById(R.id.brussels_sprout);
+        cabbage = (TextView)findViewById(R.id.cabbage);
+        carrot = (TextView)findViewById(R.id.carrot);
+        cauliflower = (TextView)findViewById(R.id.cauliflower);
+        celery = (TextView)findViewById(R.id.celery);
+        corn = (TextView)findViewById(R.id.corn);
+        cucumber = (TextView)findViewById(R.id.cucumber);
+        eggplant = (TextView)findViewById(R.id.eggplant);
+        kale = (TextView)findViewById(R.id.kale);
+        leek = (TextView)findViewById(R.id.leek);
+        lettuce = (TextView)findViewById(R.id.lettuce);
+        melon = (TextView)findViewById(R.id.melon);
+        okra = (TextView)findViewById(R.id.okra);
+        onion = (TextView)findViewById(R.id.onion);
+        parsnip = (TextView)findViewById(R.id.parsnip);
+        peas = (TextView)findViewById(R.id.peas);
+        pepper = (TextView)findViewById(R.id.pepper);
+        potato = (TextView)findViewById(R.id.potato);
+        pumpkin = (TextView)findViewById(R.id.pumpkin);
+        radish = (TextView)findViewById(R.id.radish);
+        spinach = (TextView)findViewById(R.id.spinach);
+        squash = (TextView)findViewById(R.id.squash);
+        sweetPotato = (TextView)findViewById(R.id.sweet_potato);
+        swissChard = (TextView)findViewById(R.id.swiss_chard);
+        tomato = (TextView)findViewById(R.id.tomato);
+        turnip = (TextView)findViewById(R.id.turnip);
+        watermelon = (TextView)findViewById(R.id.watermelon);
 
         setFonts();
     }
@@ -60,7 +113,7 @@ public class AllPlants extends ActionBarActivity {
     public void plantNextPage(View v){
         tv = (TextView) v;
         current = tv.getText().toString();
-        Intent goToPlant = new Intent(getApplicationContext(),Plant.class);
+        Intent goToPlant = new Intent(getApplicationContext(),PlantActivity.class);
         goToPlant.putExtra("name",current);
         startActivity(goToPlant);
 
@@ -78,5 +131,32 @@ public class AllPlants extends ActionBarActivity {
         beans.setTypeface(plantText);
         beets.setTypeface(plantText);
         broccoli.setTypeface(plantText);
+        brusselSprouts.setTypeface(plantText);
+        cabbage.setTypeface(plantText);
+        carrot.setTypeface(plantText);
+        cauliflower.setTypeface(plantText);
+        celery.setTypeface(plantText);
+        corn.setTypeface(plantText);
+        cucumber.setTypeface(plantText);
+        eggplant.setTypeface(plantText);
+        kale.setTypeface(plantText);
+        leek.setTypeface(plantText);
+        lettuce.setTypeface(plantText);
+        melon.setTypeface(plantText);
+        okra.setTypeface(plantText);
+        onion.setTypeface(plantText);
+        parsnip.setTypeface(plantText);
+        peas.setTypeface(plantText);
+        pepper.setTypeface(plantText);
+        potato.setTypeface(plantText);
+        pumpkin.setTypeface(plantText);
+        radish.setTypeface(plantText);
+        spinach.setTypeface(plantText);
+        squash.setTypeface(plantText);
+        sweetPotato.setTypeface(plantText);
+        swissChard.setTypeface(plantText);
+        tomato.setTypeface(plantText);
+        turnip.setTypeface(plantText);
+        watermelon.setTypeface(plantText);
     }
 }
