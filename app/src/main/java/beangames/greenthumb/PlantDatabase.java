@@ -13,6 +13,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.Serializable;
+import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -20,11 +21,13 @@ import java.util.Map;
 /**
  * Created by MSI Note on 3/13/2015.
  */
-public class PlantDatabase implements Serializable {
+public class PlantDatabase extends Database implements Serializable {
 
-    HashMap<String, Plant> database;
+    private HashMap<String, Plant> database;
 
     public Activity presentActivity;
+
+    public static final String databasePath  = "database/plant_database.txt";
 
     public PlantDatabase(Activity activity) {
         presentActivity = activity;
@@ -163,9 +166,10 @@ public class PlantDatabase implements Serializable {
         database.put(s, p);
     }
 
-    public Plant get(String s){
-        if (database.containsKey(s)) {
-            return database.get(s);
+    public Plant get(String o){
+        if (database.containsKey(o)) {
+
+            return database.get(o);
         }
         return (Plant) null;
     }

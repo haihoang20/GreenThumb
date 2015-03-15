@@ -51,4 +51,24 @@ public class MyGarden extends ActionBarActivity {
         topBar.setTypeface(menu);
         bottomBar.setTypeface(menu);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyGarden myGarden = (MyGarden) o;
+
+        if (!bottomBar.equals(myGarden.bottomBar)) return false;
+        if (!topBar.equals(myGarden.topBar)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = topBar.hashCode();
+        result = 31 * result + bottomBar.hashCode();
+        return result;
+    }
 }
