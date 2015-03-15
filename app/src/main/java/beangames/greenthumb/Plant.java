@@ -1,16 +1,19 @@
 package beangames.greenthumb;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class Plant extends ActionBarActivity {
     private String name;
     private String season;
+    private TextView topBarText;
 
 
     @Override
@@ -21,6 +24,8 @@ public class Plant extends ActionBarActivity {
         name = intent.getExtras().getString("name");
         Toast toast = Toast.makeText(this, name, Toast.LENGTH_LONG);
         toast.show();
+        topBarText  = (TextView)findViewById(R.id.top_bar);
+        setFonts();
     }
 
 
@@ -45,4 +50,17 @@ public class Plant extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void setFonts(){
+        String fontPath = "fonts/Chocolate.ttf";
+
+
+        Typeface menu   = Typeface.createFromAsset(getAssets(),fontPath);
+
+
+
+        topBarText.setTypeface(menu);
+
+    }
+
 }
