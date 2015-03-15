@@ -26,16 +26,17 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         setFont();
         db = new PlantDatabase(this);
-        eden = new MyGarden();
-        GardenStorage bj = new GardenStorage(this);
-        bj.writeStorage(eden);
-        MyGarden mg;
-        GardenStorage jb = new GardenStorage(this);
-        mg = jb.loadStorage();
+
+        GardenDatabase dd = new GardenDatabase(this);
+        dd.add("Beans", new Plant("Beans", "Mid-May-June", "Mid-May-June", "65", "Watering", "Fertilization", "Depth", "Row Spacing", "Plant Spacing"));
+        GardenDatabase bj = new GardenDatabase(this);
+        dd.writeDatabase();
+        bj.loadDatabase();
+        Plant mg = dd.get("Beans");
         System.out.println("!!!!!!!!!!!!!!!!!!");
         System.out.println("!!!!!!!!!!!!!!!!!!");
         System.out.println("!!!!!!!!!!!!!!!!!!");
-        System.out.println(mg.equals(eden));
+        System.out.println(mg.getName());
         System.out.println("!!!!!!!!!!!!!!!!!!");
         System.out.println("!!!!!!!!!!!!!!!!!!");
         System.out.println("!!!!!!!!!!!!!!!!!!");
